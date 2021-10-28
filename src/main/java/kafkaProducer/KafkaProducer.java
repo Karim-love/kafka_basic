@@ -6,4 +6,8 @@ package kafkaProducer;
  * Time : 오후 2:54
  */
 public class KafkaProducer {
+
+    public static void main(String[] args) {
+
+    }
 }
