@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration scan="true" scanPeriod="30 seconds">
+
+  <property name="LOG_DIR" value="./logs" />
+  <property name="LOG_HISTORY" value="7" />
+
+    <!-- Appender List -->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{HH:mm:ss.SSS}],%m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="kafka-file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <File>${LOG_DIR}/kafka.log</File>
+        <encoder>
+            <pattern>[%d{yyyyMMddHHmmss.SSS}] [%thread] %-5level %logger{35} - %m%n</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_DIR}/kafka.log.%d{yyyy-MM-dd}.%i.gz</fileNamePattern>
+            <maxHistory>${LOG_HISTORY}</maxHistory>
+            <maxFileSize>500MB</maxFileSize>
+        </rollingPolicy>
+    </appender>
+
+    <logger name="org.apache.kafka" level="INFO">
+        <appender-ref ref="kafka-file"/>
+    </logger>
+
+    <root level="INFO">
+    <appender-ref ref="console"/>
+    </root>
+
+<!--
+    <root level="OFF"/>
+-->
+
+</configuration>

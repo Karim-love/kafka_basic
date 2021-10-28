@@ -2,16 +2,30 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+group 'com.karim'
 version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
+ext {
+    base_name = "kafka-basis"
+    main_class = "com.karim"
+    commons_lang_ver = "3.11"
+    guava_ver = "30.1-jre"
+    gson_ver = "2.8.6"
+    logback_ver = "1.2.3"
+    junit_ver = "4.13.2"
+}
+
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: "1.2.3"
+    compile group: 'org.apache.kafka', name: 'kafka-clients', version: '3.0.0'
+    compile "org.apache.commons:commons-lang3:3.6"
+    compile "commons-io:commons-io:2.6"
 }
 
 test {
