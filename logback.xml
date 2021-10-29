@@ -39,8 +39,5 @@
     <appender-ref ref="console"/>
     </root>
 
-<!--
-    <root level="OFF"/>
--->
 
 </configuration>

@@ -22,10 +22,8 @@ ext {
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-    compile group: 'ch.qos.logback', name: 'logback-classic', version: "1.2.3"
-    compile group: 'org.apache.kafka', name: 'kafka-clients', version: '3.0.0'
-    compile "org.apache.commons:commons-lang3:3.6"
-    compile "commons-io:commons-io:2.6"
+    compile group: 'org.apache.kafka', name: 'kafka-clients', version: '2.8.1'
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
 }
 
 test {
