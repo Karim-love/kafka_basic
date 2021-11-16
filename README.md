@@ -1,5 +1,5 @@
 # 📃 Kafka 기본 코드들
-```aidl
+```
 >> kafka gradle version
 kafka-clients : 2.8.1
 
