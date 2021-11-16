@@ -1,6 +1,16 @@
 # 📃 Kafka 기본 코드들
+```aidl
+>> kafka gradle version
+kafka-clients : 2.8.1
+
+>> 구축 kafka version
+single-kafka : 2.6.0
+cluster-kafka : 2.6.0
+```
 
 ## ❓ kafka 동작에 대한 기본 기능
+kafka의 기본 동작에 대해 pkg별로 구현한 프로젝트입니다.
+
 ## ✔️Pakage 별 정리
 
 ## 1. kafkaConsumer
