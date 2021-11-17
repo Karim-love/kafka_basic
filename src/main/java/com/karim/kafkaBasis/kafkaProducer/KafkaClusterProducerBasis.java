@@ -1,7 +1,7 @@
-package kafkaProducer;
+package com.karim.kafkaBasis.kafkaProducer;
 
 import com.google.gson.JsonObject;
-import kafkaThreadBasis.instance.kafkaQueue;
+import com.karim.kafkaBasis.kafkaThreadBasis.instance.kafkaQueue;
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 

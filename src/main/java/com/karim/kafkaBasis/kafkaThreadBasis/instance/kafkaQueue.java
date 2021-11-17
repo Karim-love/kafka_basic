@@ -1,4 +1,4 @@
-package kafkaThreadBasis.instance;
+package com.karim.kafkaBasis.kafkaThreadBasis.instance;
 
 import java.util.concurrent.LinkedBlockingDeque;
 

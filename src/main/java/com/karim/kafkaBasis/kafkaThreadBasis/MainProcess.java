@@ -1,7 +1,7 @@
-package kafkaThreadBasis;
+package com.karim.kafkaBasis.kafkaThreadBasis;
 
-import kafkaConsumer.KafkaClusterConsumerBasis;
-import kafkaProducer.KafkaClusterProducerBasis;
+import com.karim.kafkaBasis.kafkaConsumer.KafkaClusterConsumerBasis;
+import com.karim.kafkaBasis.kafkaProducer.KafkaClusterProducerBasis;
 
 /**
  * Created by sblim

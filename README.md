@@ -13,12 +13,12 @@ kafka의 기본 동작에 대해 pkg별로 구현한 프로젝트입니다.
 
 ## ✔️Pakage 별 정리
 
-## 1. kafkaConsumer
+## 1. com.karim.kafkaBasis.kafkaConsumer
 - 해당 topic에서 메세지를 구독 기능
-## 2. kafkaProducer
+## 2. com.karim.kafkaBasis.kafkaProducer
 - 메세지를 topic에 제공 기능
 
-## 3. kafkaThreadBasis
+## 3. com.karim.kafkaBasis.kafkaThreadBasis
 - Thread로 consumer와 producer 실행
 > 로직
 > 1. consumer가 꺼내온 데이터를 kafkaQueue(공통 큐)로 넣는다.

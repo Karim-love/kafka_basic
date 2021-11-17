@@ -1,6 +1,6 @@
-package kafkaConsumer;
+package com.karim.kafkaBasis.kafkaConsumer;
 
-import kafkaThreadBasis.instance.kafkaQueue;
+import com.karim.kafkaBasis.kafkaThreadBasis.instance.kafkaQueue;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
