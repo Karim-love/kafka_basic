@@ -12,7 +12,7 @@ import java.util.Properties;
  */
 public class KafkaProducerBasis {
 
-    private static final String KAFKA_SINGLE_IP = "192.168.124.238:1146";
+    private static final String KAFKA_SINGLE_IP = "192.168.124.238:1227";
     private static final String TOPIC_NAME = "karim-topic";
 
     public static void main(String[] args) {
