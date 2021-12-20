@@ -2,6 +2,7 @@
 ```
 >> kafka gradle version
 kafka-clients : 2.8.1
+kafka-streams : 2.8.1
 
 >> 구축 kafka version
 single-kafka : 2.6.0
