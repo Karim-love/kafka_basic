@@ -1,5 +1,7 @@
 package com.karim.kafkaBasis.kafkaConsumer;
 
+import com.karim.kafkaBasis.cfg.LoadProperties;
+import com.karim.kafkaBasis.define.CommonDefine;
 import com.karim.kafkaBasis.kafkaThreadBasis.instance.kafkaQueue;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -14,14 +16,16 @@ import java.util.Properties;
  * Time : 오후 2:57
  */
 public class KafkaClusterConsumerBasis extends Thread{
-    private static final String KAFKA_CLUSTER_IP = "192.168.124.220:9092,192.168.124.221:9092,192.168.124.250:9092";
     private static final String TOPIC_NAME = "karim-receive-topic";
 
     public void run(){
+
+        LoadProperties.loadProperties();
+
         Properties props = new Properties();
 
         // kafka server host 및 port 설정
-        props.put("bootstrap.servers", KAFKA_CLUSTER_IP);
+        props.put("bootstrap.servers", CommonDefine.KAFKA_IP);
         props.put("group.id", "karim-group-id-1"); // group-id 설정
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer"); // key deserializer
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer"); // value deserializer

@@ -1,5 +1,7 @@
 package com.karim.kafkaBasis.kafkaConsumer;
 
+import com.karim.kafkaBasis.cfg.LoadProperties;
+import com.karim.kafkaBasis.define.CommonDefine;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
@@ -15,14 +17,16 @@ import java.util.Properties;
 
 public class KafkaConsumerBasis {
 
-    private static final String KAFKA_SINGLE_IP = "192.168.124.238:1146";
     private static final String TOPIC_NAME = "karim-topic";
 
     public static void main(String[] args) {
+
+        LoadProperties.loadProperties();
+
         Properties props = new Properties();
 
         // kafka server host 및 port 설정
-        props.put("bootstrap.servers", KAFKA_SINGLE_IP);
+        props.put("bootstrap.servers", CommonDefine.KAFKA_IP);
         props.put("group.id", "karim-group-id-1"); // group-id 설정
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer"); // key deserializer
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer"); // value deserializer
